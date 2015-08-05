@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Ike and Jenna's Amazing Vacation Tracker</title>
+    </head>
+    <body>
+        <h1>The Amazing Vacation Tracker</h1>
+
+        {% if places is not places %}
+            <p>Here are all the amazing places you've been:</p>
+                <ul>
+                    {% for places in places %}
+                        <div>
+                        <li>{{ task.getPhoto}}</li>
+                        <li>{{ task.getCityName}}</li>
+                        <li>{{ task.getVisitLength}}</li>
+                        </div>
+                    {% endfor %}
+                </ul>
+        {% endif %}
+
+        <form action='/places' method='post'>
+            <div class='form-group'>
+                <label for='cityname'>What amazing city did you visit?!</label>
+                <input type='text' name='cityname' id='cityname' class='form-control'>
+            </div>
+            <div class='form-group'>
+                <label for='visitlength'>How long did you stay in the amazing city?</label>
+                <input type='text' name='visitlength' id='visitlength' class='form-control'>
+            </div>
+            <div class='form-group'>
+                <label for='photo'>Upload an amazing picture!!!!</label>
+                <input type='file' name='photo' id='photo' accept='image/*'>
+                <input type='submit'>
+            </div>
+        </form>
+    </body>
+</html>

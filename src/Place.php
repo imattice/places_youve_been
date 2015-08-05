@@ -32,12 +32,12 @@ class Place
         return $this->photo;
     }
 
-    function setVisit_Length($new_visit_length)
+    function setVisitLength($new_visit_length)
     {
         $this->visit_length = (int) $new_visit_length;
     }
 
-    function getVisit_Length()
+    function getVisitLength()
     {
         return $this->visit_length;
     }
