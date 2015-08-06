@@ -6,7 +6,7 @@
     if (empty($_SESSION['list_of_places']))
     {
         $_SESSION['list_of_places'] = array();
-    }
+    };
 
     $app = new Silex\Application();
     $app['debug'] = true;
